@@ -12,7 +12,8 @@ const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack bg="white" color="black" rounded="xl"> 
       {/* VStack is a vertical stack container that holds the content of the card */}
-      <Image src={imageSrc} width="100%" rounded="inherit" />
+      {/* ⚡ Bolt Optimization: Added loading="lazy" to defer loading images below the fold, saving bandwidth and improving initial page load time */}
+      <Image src={imageSrc} width="100%" rounded="inherit" loading="lazy" />
       {/* Display the image at the top of the card with full width, rounded corners */}
 
       <VStack align="flex-start" p={4}>
